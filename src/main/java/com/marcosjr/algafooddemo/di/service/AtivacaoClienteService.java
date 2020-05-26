@@ -1,11 +1,8 @@
 package com.marcosjr.algafooddemo.di.service;
 
-import org.springframework.stereotype.Component;
-
 import com.marcosjr.algafooddemo.di.modelo.Cliente;
 import com.marcosjr.algafooddemo.di.notification.Notificador;
 
-@Component
 public class AtivacaoClienteService {
 	
 	private Notificador notificador;
