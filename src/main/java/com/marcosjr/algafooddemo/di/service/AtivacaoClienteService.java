@@ -1,16 +1,17 @@
 package com.marcosjr.algafooddemo.di.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.marcosjr.algafooddemo.di.modelo.Cliente;
+import com.marcosjr.algafooddemo.di.notification.NivelUrgencia;
 import com.marcosjr.algafooddemo.di.notification.Notificador;
+import com.marcosjr.algafooddemo.di.notification.TipoDoNotificador;
 
 @Component
 public class AtivacaoClienteService {
 		
-	@Qualifier("email")
+	@TipoDoNotificador(NivelUrgencia.SEM_URGENCIA)
 	@Autowired
 	private Notificador notificador;
 	
