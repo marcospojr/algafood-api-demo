@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.marcosjr.algafooddemo.di.modelo.Cliente;
 
 @Component
-public class NotificadorEmail implements Notificador {
+public class NotificadorSMS implements Notificador {
 	
 	private boolean caixaAlta;
 
@@ -15,8 +15,8 @@ public class NotificadorEmail implements Notificador {
 			mensagem = mensagem.toUpperCase(); 
 		}
 		
-		System.out.printf("Notificando o cliente %s pelo email %s: %s\n ",
-				cliente.getNome(), cliente.getEmail(), mensagem);
+		System.out.printf("Notificando o cliente %s por SMS através do telefone %s: %s\n ",
+				cliente.getNome(), cliente.getTelefone(), mensagem);
 	}
 
 	public void setCaixaAlta(boolean caixaAlta) {
